@@ -1,0 +1,44 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-cards/_s-cards.pug
+include ../blocks/s-project/_s-project.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/sMobileBlock/_sMobileBlock.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-project-head/_s-project-head.pug
+include ../blocks/s-project-list/_s-project-list.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Реализованные проекты'
+	title= title
+block pagecontent 
+
+	+mob-mnu()
+	header.header
+		+top-line()
+			//- +b.top-line-sub.d-none.d-sm-block
+			//- 	.container
+			//- 		ul
+			//- 			li: a(href="#") О фонде
+			//- 			li.current-menu-item: a(href="#") Команда
+			//- 			li: a(href="#") Наши награды
+			//- 			li: a(href="#") документы
+			//- 			li: a(href="#") ОТЧЁТЫ
+	//- +header()
+	//- 	//- +top-nav()
+	//- 	+header-block()
+	+page-head('Текущие проекты')(class="ttu ")
+		+e.sub-title 28 храмов и монастырей нуждаются в Вашей помощи
+	+s-project-head
+	//- +s-project('btnN')()
+	+s-project-list-done
+	//- +s-cards()(class='order-sm-first')
+	+footer()

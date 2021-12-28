@@ -1,0 +1,93 @@
+
+	// start .sMobileBlock
+	.sMobileBlock {
+	background-color: #AA3F59;
+	
+	padding-top: 0;
+		&__item{
+			// display: block;
+			display: flex;
+			flex-direction: column;
+			min-height: rem(180);
+			margin-bottom: 20px;
+			box-shadow: 0px 8px 16px #9A2944;
+			border-radius: 8px;
+			position: relative;
+			overflow: hidden;
+			padding: 18px 20px;
+			color: #ffffff !important;
+			text-decoration: none !important;
+			background-color: #3c414f;
+			// .picture-bg{
+
+			// }
+			&::after{
+				@include mt;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+			}
+			&:hover{
+				box-shadow: 0px 0 0 #9A2944;
+				&::after{
+					opacity: 0.8;
+				}
+			}
+		}
+		&__label{
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			font-size: 11px;
+			margin-bottom: auto;
+			img{
+				position: relative;
+				top: rem(-2);
+				margin-right: rem(5);
+			}
+		}
+		&__title{
+			display: block; 
+			font-size: 21px;
+			line-height: 120%;
+			@extend .mono;
+			max-width: 260px;
+			em{
+				display: block;
+			}
+		}
+		p{
+			padding-top: 0.5rem;
+			margin-bottom: 0;
+			font-size: 13px;
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sMobileBlock

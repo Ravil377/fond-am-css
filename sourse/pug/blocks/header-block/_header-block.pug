@@ -1,0 +1,51 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				- for (var x = 0; x < 3; x++)
+					+e.slide.swiper-slide.bgs.text-center(style="background-image: url(img/@2x/header-bg.jpg);")
+							+e.logo
+								.d-none.d-sm-block
+									img.logo-img.res-i.d-none.d-lg-inline-block(src="img/svg/logo-lg-without-text-light.svg", alt="")
+								 
+									img.logo-img.res-i.d-lg-none(src="img/svg/logo-lg-without-text.svg", alt="")
+									br
+									img.logo-text.res-i(src="img/svg/text.svg", alt="")
+								.d-sm-none
+									img.logo-img.res-i.d-lg-none(src="img/svg/logo-lg-bold.svg", alt="")
+								+e.text Строим и благоурашаем храмы с 2010 года
+		+e.swiper-pagination.swiper-pagination.d-none.d-sm-block
+		
+	// end header-block
+
+mixin header-block1()
+	// start header-block
+	+b.header-block__main.d-flex
+		+b.header-block__main-left
+			+e.main-title Сохраняя прошлое, создаём&nbsp;будущее
+			+e.main-subtitle Наша цель — сделать так, чтобы в России не осталось ни одного разрушенного и не действующего храма
+			+e.main-subscribe Подпишитесь на регулярные пожертвования
+			+b.form-wrap
+				+input('Любая сумма от 50 Р').mb-5
+				+e.BUTTON.btn.btn-success(type="submit") Хочу помогать
+		+b.header-block__main-right
+			img.lazy(src="#" data-src="img/@2x/map-russia.png" alt="").header-block__main-img
+			
+		//- +e.slider--js.swiper-container
+		//- 	.swiper-wrapper
+		//- 		- for (var x = 0; x < 3; x++)
+		//- 			+e.slide.swiper-slide.bgs.text-center(style="background-image: url(img/@2x/header-bg.jpg);")
+		//- 					+e.logo
+		//- 						.d-none.d-sm-block
+		//- 							img.logo-img.res-i.d-none.d-lg-inline-block(src="img/svg/logo-lg-without-text-light.svg", alt="")
+								 
+		//- 							img.logo-img.res-i.d-lg-none(src="img/svg/logo-lg-without-text.svg", alt="")
+		//- 							br
+		//- 							img.logo-text.res-i(src="img/svg/text.svg", alt="")
+		//- 						.d-sm-none
+		//- 							img.logo-img.res-i.d-lg-none(src="img/svg/logo-lg-bold.svg", alt="")
+		//- 						+e.text Строим и благоурашаем храмы с 2010 года
+		//- +e.swiper-pagination.swiper-pagination.d-none.d-sm-block
+		
+	// end header-block	

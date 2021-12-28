@@ -1,0 +1,30 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		+e.inner
+			.container-fluid
+				.row.top-line-row
+					+e.col--left.col-auto
+						+b.toggle-menu-mobile--js
+							span
+							p Меню
+					.col.text-center.top-line-center
+						+e.logo(href="#")
+							+icon('logo-top-fond')
+								//- img.res-i(src="img/svg/logo-top-fond.svg", alt="")
+					//- +e.col.col-auto.d-none.d-lg-block
+					//- 	+soc
+					+e.col.col-auto.text-right
+						//- +b.link-donate(href="#")
+							//- +e.icon-wrap.d-xxl-none
+							//- 	+icon('donate')
+							//- .d-none.d-xxl-block ПОЖЕРТВОВАТЬ
+						+b.form-wrap
+							+e.BUTTON.btn.btn-success.top-line-btn Хочу помочь
+		block
+	// end .top-line
+
+
+
+
+

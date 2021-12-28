@@ -1,0 +1,16 @@
+mixin s-form022()
+	// start s-form
+	+b.s-form-22.block-with-lazy#s-form&attributes(attributes)
+		.container
+			+form-wrap
+				+e.row.row
+					+e.col.col-12
+						+e.title Подписывайтесь  на&nbsp;новости о&nbsp;работе фонда
+					.col
+						+input("Введите адрес вашей электронной почты","email")
+						+e.row.row
+							.col
+								+polite()
+							.col-md-auto.text-center
+								+e.btn(type="submit" disabled) ПОДПИСАТЬСЯ
+	// end s-form

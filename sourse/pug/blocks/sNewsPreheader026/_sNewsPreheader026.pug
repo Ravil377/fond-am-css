@@ -1,0 +1,30 @@
+mixin sNewsPreheader026()
+	// start sNewsPreheader026
+	+b.SECTION.sNewsPreheader026#sNewsPreheader026&attributes(attributes)
+		+e.bg-block
+			img(src="img/@2x/026-preheader-bg.jpg" alt="")
+		+e.content
+			+e.back-strip
+				+e.A.back-btn(href='#')
+					+icon('arrow-right')
+					span НАЗАД
+			+e.section-title.text-center
+				p Новоспасский монастырь
+				h2 Завершен этап по укладке полов в Знаменском храме
+			+e.likes-and-share-cont.row
+				.col
+					+e.date-view-share-cont
+						+e.date-txt 13.08.20
+						+e.view-txt.view-shar-frame
+							+icon('eye')
+							span 45
+						+e.share-txt.view-shar-frame
+							+icon('share')
+							span 45
+				.col-12.col-sm-auto
+					+e.share-btn
+						+icon('share')
+						span Поделиться
+
+
+	// end sNewsPreheader026

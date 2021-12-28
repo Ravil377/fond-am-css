@@ -1,0 +1,28 @@
+mixin s-rews()
+	// start s-rews
+	+b.SECTION.s-rews.section#s-rews&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Отзывы
+			+e.slider-wrapper
+				+e.slider.slider-rew-js.swiper-container
+					.swiper-wrapper
+						mixin slide(i, ind)
+							+e.slide.swiper-slide 
+								+e.DIV.item.rew-modal( data-index= ind) 
+									+e.man
+										+e.img-wrap-man
+											if i
+												img.res-i(src= i, alt="")
+										+e.name Патриарх Московский и&nbsp;Всея Руси Кирилл
+									p «Участвовали в проекте «Узнай! Вдохновись! Сделай!». Огромное спасибо за экскурсию об истории благотворительности. Много узнали о предпринимателях - благотворителях и меценатах! Лисицына А. - профессионал с большой буквы! Работники музея - фанаты своего дела, влюбленные в Москву, в страну, прекрасно владеющие знаниями по истории страны и навыками общения с посетителями! Спасибо»!
+									+e.link-more
+										| Подробнее
+										+icon("arrow-b-right")
+								 
+							// /+e.DIV.slide.swiper-slide
+						+slide('img/@2x/man.png','1')
+						+slide('','2')
+						+slide('','3')
+				+arrow()
+	// end s-rews

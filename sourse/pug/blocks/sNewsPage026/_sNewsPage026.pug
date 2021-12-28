@@ -1,0 +1,41 @@
+mixin sNewsPage026()
+	// start sNewsPage026
+	+b.sNewsPage026#sNewsPage026&attributes(attributes)
+		.container
+			p Cпешим поделиться радостной новостью!
+			p Этап по&nbsp;укладке полов в&nbsp;Знаменском храме Новоспасского монастыря завершен. Благодаря отделке из&nbsp;иерусалимского камня, храм приобрел светлый и&nbsp;торжественный вид. В&nbsp;этом смогли убедиться гости сегодняшней экскурсии, которую уже не&nbsp;в&nbsp;первый раз проводит в&nbsp;Новоспасском монастыре наш Фонд.
+			+b.news026-content-slider
+				.news-slider026-prev-js.wonderfull-prev.d-none.d-lg-flex
+					+icon('arrow-right')
+				.news-slider026-next-js.wonderful-next.d-none.d-lg-flex
+					+icon('arrow-left')
+				.swiper-container.news026-slider-js
+					.swiper-wrapper
+						+NewsSlide026(1)
+						+NewsSlide026(1)
+						+NewsSlide026(1)
+			p Спасибо всем, кто принимает участие в&nbsp;восстановлении Знаменского храма и&nbsp;помогает чудотворной иконе Божией Матери &laquo;Всецарица&raquo; обрести новый удел!
+			p Хотите присоединиться к&nbsp;нам? Следите за&nbsp;нашими новостями! Ближайшие экскурсии уже совсем скоро!
+			+e.date-view-share-cont
+				+e.date-txt 13.08.20
+				+e.view-txt.view-shar-frame
+					+icon('eye')
+					span 45
+				+e.share-txt.view-shar-frame
+					+icon('share')
+					span 45
+			.row
+				.col.d-none.d-sm-block
+					+e.A.back-btn(href='#')
+						+icon('arrow-right')
+						span НАЗАД
+				+e.share-btn-cont.col-sm-auto
+					+e.share-btn
+						+icon('share')
+						span Поделиться
+			+s-form022
+	// end sNewsPage026
+
+mixin NewsSlide026(imgNum)
+	.swiper-slide
+		img.swiper-lazy(src="#" data-src=`img/@2x/026-news-slider-${imgNum}.jpg` alt="")

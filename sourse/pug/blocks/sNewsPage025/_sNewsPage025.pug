@@ -1,0 +1,36 @@
+mixin sNewsPage025()
+	// start sNewsPage025
+	+b.SECTION.sNewsPage025#sNewsPage025&attributes(attributes)
+		.container
+			block
+		.container
+			+b.search-strip-025
+				+form-wrap()
+					+input('Например: Новоспаский монастырь', 'text', undefined, 'search-page025')
+					.text-center
+						+e.BUTTON.search-btn(type="submit") ИСКАТЬ
+			+b.news-filter-box
+				+e.date-filter-select-cont
+					+DatefilterSelect('floorSel', ['СТАРЫЕ', '2020', '2019'])
+		+s-news-for-025
+			.d-sm-none.text-center
+				+b.A.show-more-btn025(href="#") ПОКАЗАТЬ ЕЩЁ
+		.container
+			.d-none.d-sm-block
+				+pugin()
+			+s-form()
+	// end sNewsPage025
+
+mixin DatefilterSelect(selectName, optionsArr=['1', '2', '3'], placeholder='ПОСЛЕДНИЕ', keyClass='custom-select2')
+	select(name=selectName data-placeholder=placeholder class=keyClass)
+		option(value="" label='#')
+		option(value="ПОСЛЕДНИЕ" selected) ПОСЛЕДНИЕ
+		- for (let item of optionsArr)
+			option(value=item)=item
+
+mixin ThemefilterSelect(selectName, optionsArr=['1', '2', '3'], placeholder='ПОСЛЕДНИЕ', keyClass='custom-select2')
+	select(name=selectName data-placeholder=placeholder class=keyClass)
+		option(value="" label='#')
+		option(value="Все темы" selected) Все темы
+		- for (let item of optionsArr)
+			option(value=item)=item

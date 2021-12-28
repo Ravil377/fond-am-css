@@ -1,0 +1,49 @@
+mixin s-project-body()
+	// start s-project-body
+	+b.SECTION.s-project-body.section#s-project-body&attributes(attributes)
+		+e.container-sm.container
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					- for (var x = 1; x < 7; x++)
+						+e.slide--lg.swiper-slide
+							+b.project-item.bg-wrap
+								+pic("projec-1",'bg','')(class="picture-bg")
+								.project-item__hidden.active.mb-auto
+									+e.place(href="#")
+										+icon('mark')
+										|  г. Клин
+									+e.title Храм в&nbsp;честь свт. Тихона Патриарха Всероссийского
+										br
+										em в Клину
+											= x
+								+e.text Требуется роспись стен
+								.project-item__hidden.mb-auto
+									p Примем участие в обустройстве Никольской церкви села Мужиново! Создание колоколов издревле считалось особо богоугодным делом. Колокольный звон называют молитвой в бронзе. Верующий человек, услышав его, непременно вспомнит о Боге, перекрестится. 
+								+e.price
+									.row
+										.col-6
+											+e.price-title Собрано
+											+e.number 399 050 860 Р
+										.col-6
+											+e.price-title Требуется
+											+e.number 500 000 000 Р
+										
+								+e.btn-wrap.project-item__hidden
+									+e.btn.btn-sm(href="#") ПОМОЧЬ ХРАМУ
+								+e.foot
+									+e.foot-item
+										+icon("eye")
+										| 45
+									
+									+e.foot-item
+										+icon("donate")
+										| 133
+									+e.foot-item
+										+icon("share")
+										| 18
+			.d-none.d-sm-block
+				+pugin()
+			//- .control-wrap
+			//- 	+arrow()
+			//- 	.swiper-pagination
+	// end s-project-body

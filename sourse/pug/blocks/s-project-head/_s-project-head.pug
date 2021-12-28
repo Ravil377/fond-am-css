@@ -1,0 +1,33 @@
+mixin s-project-head()
+	// start s-project-head
+	+b.s-project-head#s-project-head&attributes(attributes)
+		.container
+			form
+				+e.input-group
+					+input('Название храма/монастыря')
+					+input('Страна, область, город или населенный пункт')
+				+e.text.d-lg-none Искать храмы по названию страны, области, города или населенного пункта
+				+e.btn(type='submit') ИСКАТЬ
+				+e.variant
+					+e.variant-item.active
+						.icon-var
+							span
+							span
+							span
+							span
+							span
+							span
+							span
+							span
+							span
+						| ПЛИТКОЙ
+				
+					+e.variant-item
+						+icon("var-2")
+						| СПИСКОМ
+				
+					+e.variant-item
+						+icon("var-3")
+						| НА КАРТЕ
+				
+	// end s-project-head

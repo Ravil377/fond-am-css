@@ -1,0 +1,433 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200525.161032.26816.0.001.json",
+    "dumpEventTime": "2020-05-25T16:10:32Z",
+    "dumpEventTimeStamp": "1590412232980",
+    "processId": 26816,
+    "cwd": "D:\\OSPanel\\domains\\Kostya\\0005fond-am",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:/Users/37529/AppData/Roaming/npm/node_modules/gulp-cli/bin/gulp.js"
+    ],
+    "nodejsVersion": "v12.13.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.13.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.13.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 74988078,
+        "nice": 0,
+        "sys": 43546281,
+        "idle": 400694187,
+        "irq": 8223234
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 80616921,
+        "nice": 0,
+        "sys": 32126640,
+        "idle": 406484750,
+        "irq": 1302656
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 72710250,
+        "nice": 0,
+        "sys": 30531234,
+        "idle": 415986812,
+        "irq": 608000
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 86888578,
+        "nice": 0,
+        "sys": 36429703,
+        "idle": 395910031,
+        "irq": 534921
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Беспроводная сеть",
+        "internal": false,
+        "mac": "00:0f:00:47:4c:72",
+        "address": "fe80::d9cf:adf6:9195:2604",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 8
+      },
+      {
+        "name": "Беспроводная сеть",
+        "internal": false,
+        "mac": "00:0f:00:47:4c:72",
+        "address": "192.168.1.6",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "DESKTOP-8HC62DQ"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff689041729",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff689045b4c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28316"
+    },
+    {
+      "pc": "0x00007ff689044b08",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24152"
+    },
+    {
+      "pc": "0x00007ff68913369b",
+      "symbol": "v8::base::CPU::has_sse+37723"
+    },
+    {
+      "pc": "0x00007ff6899382de",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff689920321",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff6897edbec",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff6897f8f90",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff6897f5ac4",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff6897eb353",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff6897e9b24",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff68980adf5",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff689576e19",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+4057"
+    },
+    {
+      "pc": "0x00007ff689d6404d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+567949"
+    },
+    {
+      "pc": "0x0000015e5f3fafbe",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2173878272,
+    "totalCommittedMemory": 2173878272,
+    "usedMemory": 2093288480,
+    "availableMemory": 64276312,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33554432,
+        "capacity": 16759808,
+        "used": 3217976,
+        "available": 13541832
+      },
+      "old_space": {
+        "memorySize": 2063183872,
+        "committedMemory": 2063183872,
+        "capacity": 2024057880,
+        "used": 2014249808,
+        "available": 9808072
+      },
+      "code_space": {
+        "memorySize": 2260992,
+        "committedMemory": 2260992,
+        "capacity": 2062048,
+        "used": 2062048,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 2887680,
+        "committedMemory": 2887680,
+        "capacity": 2132240,
+        "used": 2132240,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 71680000,
+        "committedMemory": 71680000,
+        "capacity": 71590560,
+        "used": 71590560,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3552,
+        "used": 3552,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16759808,
+        "used": 0,
+        "available": 16759808
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 358.328,
+    "kernelCpuSeconds": 174.5,
+    "cpuConsumptionPercent": 16.9367,
+    "maxRss": 3673571328,
+    "pageFaults": {
+      "IORequired": 2202865,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 11241,
+      "writes": 567
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\37529\\AppData\\Roaming",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-8HC62DQ",
+    "COMSPEC": "C:\\WINDOWS\\system32\\cmd.exe",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132283162070983937",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "DokanLibrary1": "C:\\Program Files\\Dokan\\Dokan Library-1.1.0\\",
+    "DokanLibrary1_LibraryPath_x64": "C:\\Program Files\\Dokan\\Dokan Library-1.1.0\\lib\\",
+    "DokanLibrary1_LibraryPath_x86": "C:\\Program Files\\Dokan\\Dokan Library-1.1.0\\x86\\lib\\",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "GIT_ASKPASS": "c:\\Users\\37529\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+    "HOME": "C:\\Users\\37529",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\37529",
+    "INIT_CWD": "D:\\OSPanel\\domains\\Kostya\\0005fond-am",
+    "LANG": "ru_RU.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\37529\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-8HC62DQ",
+    "MSYSTEM": "MINGW64",
+    "NUMBER_OF_PROCESSORS": "4",
+    "NVM_HOME": "C:\\Users\\37529\\AppData\\Roaming\\nvm",
+    "NVM_SYMLINK": "C:\\Program Files\\nodejs",
+    "OS": "Windows_NT",
+    "OneDrive": "C:\\Users\\37529\\OneDrive",
+    "PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\37529\\bin;C:\\Python27;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files (x86)\\Yarn\\bin;C:\\Program Files\\PuTTY;C:\\Users\\37529\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs;C:\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\37529\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\37529\\AppData\\Local\\Yarn\\bin;C:\\Users\\37529\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\37529\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\37529\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Users\\37529\\AppData\\Roaming\\npm;C:\\Users\\37529\\AppData\\Local\\GitHubDesktop\\bin;C:\\php;C:\\Users\\37529\\AppData\\Local\\.meteor;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.3\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e09",
+    "PROGRAMFILES": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "D:/OSPanel/domains/Kostya/0005fond-am",
+    "PhpStorm": "C:\\Program Files\\JetBrains\\PhpStorm 2019.3.3\\bin;",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "SESSIONNAME": "Console",
+    "SHLVL": "2",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\37529\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.45.1",
+    "TMP": "C:\\Users\\37529\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-8HC62DQ",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-8HC62DQ",
+    "USERNAME": "37529",
+    "USERPROFILE": "C:\\Users\\37529",
+    "VIPSHOME": "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release",
+    "VSCODE_GIT_ASKPASS_MAIN": "c:\\Users\\37529\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
+    "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\37529\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-a177bda115-sock",
+    "WINDIR": "C:\\WINDOWS",
+    "_": "C:/Program Files/nodejs/node"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\winmmbase.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\sharp.node",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libglib-2.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libvips-cpp.dll",
+    "C:\\WINDOWS\\System32\\ole32.dll",
+    "C:\\WINDOWS\\System32\\SHELL32.dll",
+    "C:\\WINDOWS\\System32\\shcore.dll",
+    "C:\\WINDOWS\\System32\\windows.storage.dll",
+    "C:\\WINDOWS\\System32\\shlwapi.dll",
+    "C:\\WINDOWS\\System32\\cryptsp.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libgobject-2.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libintl.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libffi-6.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libvips-42.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libcairo-2.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libexif-12.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libexpat-1.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libgmodule-2.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libgsf-1-114.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libjpeg-62.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\liblcms2-2.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\liborc-0.4-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libpango-1.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libpangoft2-1.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libpng16-16.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\librsvg-2-2.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libgif-7.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libfontconfig-1.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libwebpdemux-2.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libwebpmux-3.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libz1.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libtiff-5.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libwebp-7.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libpixman-1-0.dll",
+    "C:\\WINDOWS\\SYSTEM32\\MSIMG32.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libgcc_s_seh-1.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libgio-2.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libxml2-2.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libfribidi-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libharfbuzz.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libcroco-0.6-3.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libgdk_pixbuf-2.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libpangocairo-1.0-0.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libfreetype-6.dll",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libiconv-2.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\sharp\\build\\Release\\libpangowin32-1.0-0.dll",
+    "C:\\WINDOWS\\SYSTEM32\\USP10.dll",
+    "\\\\?\\D:\\OSPanel\\domains\\Kostya\\0005fond-am\\node_modules\\node-sass\\vendor\\win32-x64-72\\binding.node",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll"
+  ]
+}

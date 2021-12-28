@@ -1,0 +1,382 @@
+// start .sNewsPage027
+.sNewsPage027 {
+
+
+	//pugin
+	.pagination-wrapper{
+		padding-bottom: 33px;
+		@include media-breakpoint-up(lg){
+			padding-bottom: 64px;
+		}
+	}
+
+	//taken from 025
+	.container{
+		position: relative;
+
+		@include media-breakpoint-between(sm,md){
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+
+	.page-head{
+		padding-bottom: 0;
+		@include media-breakpoint-down(sm){
+			padding-top: 33px;
+		}
+		@include media-breakpoint-down(lg){
+			padding-top: 38px;
+		}
+
+
+
+		h1{
+			color: $dark2;
+		}
+		h1:before{
+			margin-bottom: 0px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 0px;
+			}
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	//top-line-sub
+	.top-line-sub-inner{
+		//
+		//margin-bottom: 46px;
+		@include media-breakpoint-up(md){
+			//margin-bottom: 10px;
+		}
+		@include media-breakpoint-up(lg) {
+			//margin-bottom: 22px;
+		}
+	}
+	.top-line-sub{
+		//
+		//padding-top: 38px;
+		@include media-breakpoint-up(md){
+			//padding-top: 38px;
+		}
+		@include media-breakpoint-up(lg){
+			//padding-top: 30px;
+			//padding-bottom: 10px;
+		}
+	}
+
+
+	//content
+	&__content{
+		//max-width: var(--about-W);
+
+		@include media-breakpoint-up(xl){
+			max-width: 945px;
+		}
+		//margin-left: auto;
+		margin-right: auto;
+	}
+	//sidebar
+	.sidebar{
+		right: 45px;
+		left: unset;
+		top: 0px;
+		&__nav{
+			//max-width: 100%;
+			//width: auto;
+
+			li:first-child{
+				a{
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	//
+	&__items-bricks-row{
+		padding-bottom: 30px;
+
+		@include roww(10px);
+		@include media-breakpoint-up(lg){
+			@include roww(15px);
+		}
+		//pp
+
+		//margin-top: -10px;
+		@include media-breakpoint-up(md){
+			margin-top: 5px;
+		}
+
+		//
+		& > *:nth-child(2){
+			@include media-breakpoint-down(sm){
+				order: -1;
+			}
+		}
+
+		& > *:nth-child(4),
+		& > *:nth-child(5){
+			display: none;
+			@include media-breakpoint-up(md){
+				display: block;
+			}
+		}
+		//last 3
+		& > *:nth-child(n + 6){
+			display: none;
+			@include media-breakpoint-up(lg){
+				display: block;
+			}
+		}
+	}
+
+	//brick-item
+	&__brick-item{
+		border-radius: 8px;
+		box-shadow: 0px 8px 16px rgba(80, 87, 105, 0.05);
+		background-color: $white;
+
+		margin-bottom: 20px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 30px;
+		}
+	}
+	&__brick-item-img{
+		display: block;
+		position: relative;
+		padding-top: 75.25%;
+		border-radius: 8px;
+
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
+	&__brick-item-descr-box{
+
+		padding: 19px 24px 21.5px 22.5px;
+		@include media-breakpoint-up(lg){
+			padding: 15px 24px 21.5px 22.5px;
+		}
+	}
+	&__brick-item-title{
+		text-decoration: none !important;
+		display: block;
+		font-weight: bold;
+		line-height: 120%;
+		color: $dark2;
+		font-size: 16px;
+
+		margin-bottom: 35px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 38px;
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(25);
+		}
+	}
+	//date-view-share-cont
+	&__date-view-share-cont{
+		display: flex;
+		//width: auto;
+
+		align-items: center;
+		color: rgba(80, 87, 105, 0.5);
+
+	}
+	&__date-txt{
+		line-height: 120%;
+		font-feature-settings: 'pnum' on, 'onum' on;
+
+		font-size: rem(16px);
+		margin-right: auto;
+	}
+
+	.view-shar-frame{
+		display: flex;
+		align-items: center;
+
+		.icon{
+			color: rgba(80, 87, 105, 0.5);
+			font-size: rem(15);
+			margin-right: rem(5);
+		}
+		span{
+			font-size: rem(13px);
+			line-height: 120%;
+		}
+	}
+	&__view-txt{
+		margin-right: 20px;
+	}
+
+	//big-brick item
+	&__big-brick-item{
+		position: relative;
+		display: block;
+		border-radius: 8px;
+
+		margin-bottom: 20px;
+		height: 500px;
+		@include media-breakpoint-up(md){
+			height: 408px;
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: 30px;
+			height: calc(100% - 30px);
+		}
+
+		//paint white
+		.sNewsPage027__date-view-share-cont{
+			color: $white;
+			.icon{
+				color: $white;
+			}
+		}
+	}
+	&__big-brick-item-img{
+		display: block;
+		position: relative;
+		border-radius: 8px;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		img{
+			border-radius: 8px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__big-brick-item-descr-box{
+		position: absolute;
+		border-radius: 8px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		background: linear-gradient(180deg, rgba(60, 65, 79, 0) 47.92%, #3C414F 100%);
+		//background-color: pink;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		padding: 26px;
+		@include media-breakpoint-up(lg){
+			padding: 19px;
+		}
+	}
+	&__big-brick-item-title{
+		font-weight: bold;
+		line-height: 120%;
+
+		@include mt();
+		color: $white;
+		&:hover{
+			color: $primary;
+		}
+
+
+		font-size: rem(16px);
+		margin-bottom: rem(25px);
+
+		@include media-breakpoint-up(md){
+			max-width: 380px;
+		}
+		@include media-breakpoint-up(lg){
+			max-width: 338px;
+		}
+	}
+
+	//.show-more-btn
+	&__show-more-btn{
+		@extend .show-more-btn-frame;
+		margin-bottom: 0;
+	}
+
+
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sNewsPage027
+
+//all themes block
+
+.all-themes-block{
+	margin-right: 20px;
+	&__all-themes-btn{
+		position: relative;
+		display: block;
+
+		//txt
+		line-height: 130%;
+		color: $dark2;
+
+		font-size: 13px;
+		@include media-breakpoint-up(md){
+			font-size: rem(16px);
+		}
+
+		//after
+		&:after{
+			@include mt();
+			position: absolute;
+			left: calc(100% + 0px); //?
+			top: 0;
+
+			content: '';
+			height: 100%;
+			width: 10px;
+			margin-left: 10px;
+
+			//background-color: red;
+			background-repeat: no-repeat;
+			background-image: url("../img/chevron-down.png");
+			background-position: center;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+}

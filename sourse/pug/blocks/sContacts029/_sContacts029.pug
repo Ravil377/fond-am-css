@@ -1,0 +1,81 @@
+mixin sContacts029()
+	// start sContacts029
+	+b.SECTION.sContacts029#sContacts029&attributes(attributes)
+		.container
+			block
+		.container
+			+e.social-links-box
+				+e.A.soc-link(href="#")
+					+icon('facebook')
+				+e.A.soc-link.vk-link(href="#")
+					+icon('vk')
+				+e.A.soc-link(href="#")
+					+icon('insta')
+				+e.A.soc-link(href="#")
+					+icon('twitter')
+			+e.contacts-data-box
+				+ContactsDataItem('Фактический адрес:','117463, г. Москва, Новоясеневский пр-т, 42')
+				+ContactsDataItem('Телефон:','+7 (495) 422-25-88', 'tel:+74954222588')
+				+ContactsDataItem('Телефон:','+7 (926) 935-93-24', 'tel:+74954222588')
+				+ContactsDataItem('Электронная почта:','info@fond-am.ru', 'mailto:info@fond-am.ru')
+			+b.s-continue
+				+e.title-main Адреса информационных стоек
+				+e.mark--mark.scroll-link(href='#map-block')
+					+icon("mark")
+					| Смотреть на карте
+				+addressRow()
+				+e.map-wrap#map-block
+					+b.info-block.active
+						+e.head
+							.strong ТРЦ «Европейский»
+							.info-block-close
+								img(src="img/svg/close.svg", alt="")
+						+e.img-wrap
+							img.res-i(src="img/@2x/742453a2d7c4228c88263a7eaae3c42a.jpg", alt="")
+						+e.body
+							.strong м. Киевская
+							p пл. Киевского вокзала, стр. 2 <br> 0 этаж, возле эскалатора
+							.small Время работы: 10:00-22:00
+							.small По вопросам работы точки обращаться по телефонам:
+								a(href="tel:+7(495)422-25-88").tdn.text-white +7 (495) 422-25-88
+								| ,
+								a(href="tel:+7(926)935-93-24").tdn.text-white +7 (926) 935-93-24
+							.small
+								a(href="www.europe-tc.ru").tdn www.europe-tc.ru
+					img.map-img.res-i(src="img/@2x/map.jpg", alt="")
+	// end sContacts029
+
+
+mixin ContactsDataItem(titleTxt='titleTxt', contentTxt='contentTxt', itemLink='#')
+	+e.contacts-data-item
+		+e.data-item-title=titleTxt
+		+e.A.data-item-content(href=itemLink)=contentTxt
+
+mixin addr(t,p)
+	+e.col--map.col-lg-4.col-sm-6.scroll-link(href='#map-block')
+		+e.col-title!= t
+		+e.col-text!= p
+
+mixin addressRow()
+	.row
+		+addr("м.&nbsp;Биберево",'&laquo;Виктория ул. Коненкова, дом&nbsp;3')
+		+addr("м.&nbsp;Киевская",'ТРЦ &laquo;Европейский пл. Киевского вокзала, стр.&nbsp;20&nbsp;этаж, возле эскалатора')
+		+addr("м.&nbsp;Селигерская",'ТЦ&nbsp;&laquo;XL Дмитровское&nbsp;ш., д.&nbsp;89,2&nbsp;этаж, возле &laquo;Остин ')
+		+addr("м.&nbsp;Братиславская",'&laquo;Виктория Перервинский бульвар, вл.4 к.1')
+		+addr("м.&nbsp;Коньково",'&laquo;Виктория ул. Профсоюзная, д.1093&nbsp;этаж, возле &laquo;Остин ')
+		+addr("м.&nbsp;Семёновская",'ТЦ&nbsp;&laquo;На&nbsp;Заре ул. Малая Семеновская, д.&nbsp;30, стр.&nbsp;6,2&nbsp;этаж')
+		+addr("м.&nbsp;Бульвар Адмирала Ушакова",'&laquo;Виктория ул. Адмирала Лазарева, д.&nbsp;2')
+		+addr("м.&nbsp;Крылатское",'&laquo;Виктория Осенний б-р.,12, 0&nbsp;этаж')
+		+addr("м.&nbsp;Тёплый стан",'ТЦ&nbsp;&laquo;Спектр Новоясеневский пр-т, д.&nbsp;1,2&nbsp;этаж')
+		+addr("м.&nbsp;Бульвар Дмитрия Донского",'ТЦ&nbsp;&laquo;Алфавит Куликовская&nbsp;ул., д.&nbsp;6,0&nbsp;этаж')
+		+addr("м.&nbsp;Новокосино",'&laquo;Виктория ул. Новокосинская, д.32/7')
+		+addr("м.&nbsp;Царицыно",'&laquo;Царицынский рынок ул. Каспийская, д.&nbsp;36')
+		+addr("м.&nbsp;Динамо",'ТЦ&nbsp;&laquo;Старт Ленинградский пр-т, д. 37б,1&nbsp;этаж')
+		+addr("м.&nbsp;Новые Черемушки",'ТЦ&nbsp;&laquo;Черемушки ул.Профсоюзная, д.56, 1-й и&nbsp;4-й этаж')
+		+addr("м.&nbsp;Щёлковская",'ТЦ&nbsp;&laquo;Первомайский ул. 9-я Парковая, д.&nbsp;62')
+		+addr("м.&nbsp;Домодедовская",'&laquo;Виктория Ореховый б-р, д.14,  стр.&nbsp;3, 0&nbsp;этаж')
+		+addr("м.&nbsp;Пролетарская",'Новоспасский монастырь Крестьянская пл., 10')
+		+addr("м.&nbsp;Юго-Западная",'&laquo;Виктория ул. Академика Анохина, д.2&nbsp;корп. 1б')
+		+addr("м.&nbsp;Каховская",'&laquo;Виктория  Севастопольский пр-т, д.&nbsp;28, стр.&nbsp;2')
+
+

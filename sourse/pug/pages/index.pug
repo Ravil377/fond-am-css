@@ -1,0 +1,101 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-cards/_s-cards.pug
+include ../blocks/s-project/_s-project.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/sMobileBlock/_sMobileBlock.pug
+include ../blocks/s-continue/_s-continue.pug
+
+block variables
+	- let  mainPage= 'main-page'
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent 
+
+	+mob-mnu()
+	+top-line()
+	+header()
+		//- +top-nav()
+		+header-block1()
+		//- +sMobileBlock
+	.d-flex.flex-column.z-6
+		+s-project
+		//- +s-cards()(class='order-sm-first')
+	.container.navigation__container
+		nav.navigation 
+			ul.navigation__list
+				li 
+					+b.navigation__item
+						+pic("current-project","bg",'','')(class="picture-bg")
+					a(href="#") Текущие проекты
+				
+				li 
+					+b.navigation__item
+						+pic("rel-project","bg",'','')(class="picture-bg")
+						a(href="#") Реализованные проекты
+				li 
+					+b.navigation__item
+						+pic("events","bg",'','')(class="picture-bg")
+						a(href="#") Мероприятия
+				li 
+					+b.navigation__item
+						+pic("news","bg",'','')(class="picture-bg")
+						a(href="#") Новости
+
+	+s-continue()(class='section') 
+		+e.map-wrap#map-block
+			+b.info-block.active 
+				.info-block-close
+					+icon("close-bold")
+				+b.project-item.bg-wrap
+					+pic("projec-1",'bg','')(class="picture-bg")
+					.project-item__hidden.active.mb-auto
+						+e.place(href="#")
+							+icon('mark')
+							|  г. Клин
+						+e.title Храм в&nbsp;честь свт. Тихона Патриарха Всероссийского
+							br
+							em в Клину
+								= x
+					+e.text Требуется роспись стен
+					.project-item__hidden.mb-auto
+						p Примем участие в обустройстве Никольской церкви села Мужиново! Создание колоколов издревле считалось особо богоугодным делом. Колокольный звон называют молитвой в бронзе. Верующий человек,
+					+e.price
+						.row
+							.col-6
+								+e.price-title Собрано
+								+e.number 399 050 860 Р
+							.col-6
+								+e.price-title Требуется
+								+e.number 500 000 000 Р
+							
+					+e.btn-wrap.project-item__hidden
+						+e.btn.btn-sm(href="#") ПОМОЧЬ ХРАМУ
+					+e.foot
+						+e.foot-item
+							+icon("eye")
+							| 45
+						
+						+e.foot-item
+							+icon("donate")
+							| 133
+						+e.foot-item
+							+icon("share")
+							| 18
+
+			img.map-img.res-i(src="img/@2x/map.jpg", alt="")
+
+	//- +s-project2
+	+s-news
+	+s-form()
+	+s-rews
+	+s-why("st")
+	+s-logo 
+	+footer()

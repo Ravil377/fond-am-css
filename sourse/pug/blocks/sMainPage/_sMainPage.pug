@@ -1,0 +1,103 @@
+include ../donateBlock/donateBlock.pug
+
+mixin sMainPage()
+	// start sMainPage
+	+b.SECTION.sMainPage#sMainPage&attributes(attributes)
+		.container
+			block
+		.container(data-sticky-container)
+			//- +b.sidebar.blured-background
+			//- 	+e.UL.nav.sticky-js(data-margin-top="140")
+			//- 		li: a(href="#video") Видео презентация
+			//- 		li: a(href="#about-icon") Об иконе
+			//- 		li: a(href="#donate-target") Цель сбора
+			//- 		li: a(href="#project") Проект
+			//- 		li: a(href="#certificat") Сертификат  благотворителя
+			//- 		li: a(href="#donate-form") Форма  пожертвования
+			+e.content
+				#video.video__container
+					p В&nbsp;2017 Фонд Архангела Михаила начал сбор средств на&nbsp;реставрацию и&nbsp;благоукрашение Знаменского храма Новоспасского монастыря. По&nbsp;старинным эскизам будет воссоздан иконостас и&nbsp;интерьеры храма, а&nbsp;также изготовлены сень и&nbsp;киот для чудотворного образа Божией матери &laquo;Bсецарица&raquo;.
+					+b.video-link019
+						+e.A.video-link(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+							+e.video-link-img
+								img.lazy(src="#" data-src="img/@2x/video.jpg" alt="")
+							+e.video-link-descr
+								+e.play-btn
+				#about-icon
+					+e.content.sMainPage__about-icon__desc
+						p Чудотворной иконе «Всецарица» молятся об исцелении <span>больных раком</span> – страшнейшей из болезней современного человечества. Также перед образом молятся об избавлении от влияния колдовства, исцелении от <span>алкогольной</span> и <span>наркотической</span> зависимостей.
+						a(href="#").about-icon__button Подробнее об иконе
+					+e.big-img-block
+						+e.img-cont
+							img.lazy(src="#" data-src="img/@2x/Pantanassa.png" alt="" class="img-cont__about")
+					+e.about-icon-bg.d-none.d-xl-block
+						img.lazy(src="#" data-src="img/@2x/019-about-bg-2.png" alt="")
+				#wonder-cases
+					+e.group
+						+b.wonder-cases-block020
+							+e.headline Чудесные случаи
+							+wonderfullCasesSlider()
+							//- +e.A.show-more-btn(href="#") ПОКАЗАТЬ ЕЩЁ
+			#restavration 
+				+e.headline Проект реставрации Знаменского храма
+				img.lazy(src="#" data-src="img/@2x/019-project-big-img.png" alt="" class="img-cont__about")
+				+e.caption Поперечный разрез храма в честь иконы Божией Матери «Знамение»
+				+e.content
+					p Будет произведена полная реставрация храма с изготовлением и укладкой новых полов и установкой нового иконостаса. Иконостас, вырезанный из бука по старинным технологиям, полностью повторит иконостас, который стоял в храме до революции 1917 года. Для иконостаса будут специально написаны иконы в стиле XIX века.
+					+b.video-link019
+						+e.A.video-link(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+							+e.video-link-img
+								img.lazy(src="#" data-src="img/@2x/019-project-video-link.jpg" alt="")
+							+e.video-link-descr
+								+e.play-btn
+						+e.descr-after-link Патриарх Кирилл возле чудотворной иконы «Всецарица»
+					p Поистине уникальным изделием храмового искусства станет сень. Из гранита и мрамора будет вырезан балдахин, имитирующий пышные ниспадающие складки ткани. 
+					p Композиция киота и сени объединит в себе лучшие материалы и техники церковного благоукрашения: резное дерево и чеканный металл, мозаику и благородный камень.
+				img.lazy(src="#" data-src="img/@2x/019-donate-target-slider-img.png" alt="" class="img-cont__about")
+				+e.caption 3D макет сени и киота
+				+e.content
+					p После завершения работ по благоукрашению Знаменского храма, имена всех благотворителей, всех тех, кто помог возродить этот храм, будут вписаны на вечное поминовение в Новоспасском монастыре. Молитва будет возноситься монахами монастыря перед образом Пречистой Божией Матери "Всецарица" столько времени, сколько будет стоять этот прекрасный храм.
+				+donateBlock('Впишите своё имя в историю Новоспасского монастыря')
+	+sert
+	// end sMainPage
+
+	//-certificat-slider019
+mixin certificatSlider019()
+	+e.slider
+		.swiper-container.certificat-slider-019-js
+			.swiper-wrapper
+				.swiper-slide
+					img.swiper-lazy(src='#' data-src='img/@2x/019-certificat-slider-1.jpg' alt='')
+				.swiper-slide
+					img.swiper-lazy(src='#' data-src='img/@2x/019-certificat-slider-2.jpg' alt='')
+
+
+	//-donate target slider
+mixin DonateTargetSlider019()
+	+b.donate-target-slider019
+		.dt-slider019-prev-js.wonderfull-prev.d-none.d-lg-flex
+			+icon('arrow-right')
+		.dt-slider019-prev-js.wonderful-next.d-none.d-lg-flex
+			+icon('arrow-left')
+		.swiper-container.donate-target-slider019-js
+			.swiper-wrapper
+				block
+
+mixin DonateTargetSlide019(slideNumber='')
+	.swiper-slide
+		+e.slide-img
+			img.swiper-lazy(src="#" data-src="img/@2x/019-donate-target-slider-img.png" alt="")
+		+e.slide-descr=`3D макет сени и киота${slideNumber}`
+
+
+mixin infoInlineTooltip()
+	+b.inline-tooltip
+		.icon-cont i
+		.tooltip-box
+			.tooltip-content
+				.img-block
+					img(src='img/@2x/019-tooltip-content.jpg' alt="")
+				.descr-block Ио&#769;сиф Исиха&#769;ст&nbsp;&mdash; афонский монах-старец, духовный наставник многих афонских монахов. С&nbsp;именами учеников Иосифа связано обновление 6&nbsp;из&nbsp;20&nbsp;афонских монастырей и&nbsp;многих обителей за&nbsp;пределами Афона
+
+
+

@@ -1,0 +1,74 @@
+mixin sAboutIcon()
+	// start sAboutIcon
+	+b.SECTION.sAboutIcon#sAboutIcon&attributes(attributes)
+		.container
+			block
+		.container(data-sticky-container)
+			+b.sidebar.blured-background
+				+e.UL.nav.sticky-js(data-margin-top="140")
+					li: a(href="#video") Видео презентация
+					li: a(href="#about-icon") Об иконе
+					li: a(href="#wonder-cases") Чудесные случаи
+			+e.content
+				#video.text-center
+					+e.group
+						+b.video-block(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+							+pic("project-main-1","bg",'','')(class="picture-bg")
+							+e.DIV.center
+								+e.DIV.play
+						+e.H2.after-video-headline Чудотворная икона &laquo;Всецарица&raquo; будет торжественно перенесена в&nbsp;отреставрированную Знаменскую церковь 31&nbsp;августа 2020&nbsp;года.
+						+e.A.donate-btn(href="#") ПОЖЕРТВОВАТЬ
+				#about-icon
+					+e.group
+						+b.about-icon-block020
+							+e.description-pre-foto
+								p Чудотворная икона &laquo;Всецарица&raquo; известна с&nbsp;XII&nbsp;века.
+								p Икона &laquo;Пантанасса&raquo; (&laquo;Всецарица&raquo; ) была подарена афонской Григориатской обители благочестивой царицей Марией Палеолог, супругой Молдавского господаря&nbsp;св. Стефана Великого (1457-1504)&nbsp;&mdash; защитника Православия, благотворителя Афона и&nbsp;восстановителя афонских святынь. Образ &laquo;Всецарица&raquo; прославился великими чудесами и&nbsp;оставался невредимым при случившихся в&nbsp;обители пожарах, даже когда все остальное сгорало дотла.
+							+e.icon-img
+								+e.img-cont
+									img(src="img/@2x/s-about-icon-icon-img.jpg" alt="")
+									//- .lazy(src="#" data-
+								+e.icon-descr-txt-block
+									h4 Чудотворная икона «Всецарица»
+									p Празднование — 31 августа
+									p (18 августа по старому стилю)
+							+e.description-after-foto
+								p В&nbsp;притворе соборного Благовещенского храма Лавры св. Афанасия находится фресковая икона Божией Матери &laquo;Всецарица&raquo;, написанная выдающимся живописцем Феофаном Критским в&nbsp;1537&nbsp;году. Во&nbsp;время турецкой оккупации монастыри Афона постоянно подвергались нападениям нечестивых захватчиков. Однажды воин-турок, стремясь осквернить настенный образ Богоматери, выстрелил в&nbsp;него. Но&nbsp;пуля чудесным образом отскочила от&nbsp;изображения Младенца и&nbsp;поразила богохульника насмерть, попав ему в&nbsp;лоб. След от&nbsp;выстрела можно увидеть и&nbsp;теперь.
+								p С&nbsp;XVII века стал известен образ, находящийся на&nbsp;Святой Горе Афон в&nbsp;обители Ватопед. Здесь икона Пресвятой Богородицы &laquo;Всецарица&raquo; впервые прославилась чудом исцеления молодого человека увлекавшегося сатанинскими учениями. Войдя в&nbsp;собор, он&nbsp;направился к&nbsp;иконе. Вдруг лик Богородицы блеснул и&nbsp;какая-то невидимая сила бросила его на&nbsp;землю. Придя в&nbsp;себя, он&nbsp;глубоко раскаялся и&nbsp;на&nbsp;исповеди признался в&nbsp;том, что занимался магией. Чудесное вмешательство Богородицы убедило его изменить свою жизнь и&nbsp;стать благочестивым христианином.
+								p Икона &laquo;Всецарица&raquo; явила свою чудотворную силу против колдовских чар; в&nbsp;наше время особенно прославилась исцелениями онкологических заболеваний.
+				#wonder-cases
+					+e.group
+						+b.wonder-cases-block020
+							+e.headline Чудесные случаи
+							+wonderfullCasesSlider()
+							+e.A.show-more-btn(href="#") ПОКАЗАТЬ ЕЩЁ
+							+e.lower-txt-block
+								p Чтимый список с&nbsp;древней чудотворной иконы, специально изготовленный в&nbsp;Ватопедском монастыре и&nbsp;привезенный в&nbsp;Россию в&nbsp;1997&nbsp;году, находится в&nbsp;московском Новоспасском ставропигиальном мужском монастыре. Перед этим образом в&nbsp;обители ежедневно совершаются молебные пения, а&nbsp;в&nbsp;воскресные дни служатся молебны с&nbsp;водоосвящением.
+								p Божия Матерь являет Свою неизреченную милость и&nbsp;подает исцеление всем, кто с&nbsp;верой и&nbsp;любовью обращается к&nbsp;Ней в&nbsp;молитве пред&nbsp;Ее прославленным образом.
+								p К&nbsp;особой святыне монастыря&nbsp;&mdash; иконе Божией Матери &laquo;Всецарица&raquo;, хранящейся в&nbsp;верхнем храме Преображенского собора нужно подниматься по&nbsp;высокой лестнице, что значительно затрудняет доступ людям с&nbsp;ограниченными возможностями. Чтобы люди на&nbsp;инвалидных колясках могли попасть к&nbsp;образу, икона будет перенесена в&nbsp;Знаменскую церковь.
+							+e.lower-primay-txt.text-center
+								p Чудотворная икона &laquo;Всецарица&raquo; будет торжественно перенесена в&nbsp;отреставрированную Знаменскую церковь 31&nbsp;августа 2020&nbsp;года.
+								+e.A.donate-btn(href="#") ПОЖЕРТВОВАТЬ
+	// end sAboutIcon
+
+mixin wonderfullCasesSlider()
+	+e.wonderfull-cases-slider
+		.wonderfull-prev.d-none.d-lg-flex
+			+icon('arrow-right')
+		.wonderful-next.d-none.d-lg-flex
+			+icon('arrow-left')
+		.swiper-container.wonderfull-cases-js
+			.swiper-wrapper
+				+wonderfullCSlide()
+				+wonderfullCSlide()
+				+wonderfullCSlide()
+mixin wonderfullCSlide()
+	.swiper-slide
+		+e.slide-content
+			+e.img-block
+				img.swiper-lazy(src="#" data-src="img/wonder-sl-img.svg" alt="")
+			+e.descr-block
+				p Татьяна рассказывает о&nbsp;своей матери, которая заболела раком в&nbsp;возрасте 43&nbsp;лет:  &quot;У&nbsp;неё уже были метастазы, но&nbsp;молитва, вера и&nbsp;любовь близких сотворили чудо. Она прошла и&nbsp;костыли, и&nbsp;инвалидную коляску, но&nbsp;умерла аж&nbsp;в&nbsp;83&nbsp;года. Когда ей&nbsp;удалили желудок, ей&nbsp;нужно было каждый месяц лежать в&nbsp;больнице. И&nbsp;каждый раз врачи говорили, что это удивительный случай.
+				+e.A.learn-more-link(href="#")
+					span Подробнее
+					+icon('arrow-left')

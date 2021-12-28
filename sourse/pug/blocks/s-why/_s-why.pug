@@ -1,0 +1,39 @@
+mixin s-why(st)
+	// start s-why
+	+b.SECTION.s-why.section#s-why&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как пожертвовать
+				if !st
+					+e.text.text-primary Если вам близки ценности фонда и&nbsp;вы&nbsp;хотите помочь нам в&nbsp;развитии благо дела &minus; храмоздания, вы&nbsp;можете сделать это  следующими способами:
+			+e.arrow-wrapper
+				+e.slider.slider-auto-mob-js.swiper-container
+					.swiper-wrapper
+						mixin slide(i, t,p, img)
+							+e.slide.swiper-slide 
+								+e.item(href="#")
+									.row
+										.col-lg-12.col-auto
+											+e.DIV.icon-wrap.text-lg-left
+												if i
+													+icon('s-why-'+ i)
+												if img
+													img(src=`img/@2x/${img}`, alt="")
+										.col-lg-12.col
+											+e.DIV.title= t
+											p= p
+											block
+							// /+e.DIV.slide.swiper-slide
+						+slide('1','ЧЕРЕЗ ИНТЕРНЕТ','Банковской картой или электронными деньгами')
+							+e.foot
+								img.res-i(src="img/@2x/bank_icons.png", alt="")
+						+slide('2','СМС-ПОЖЕРТВОВАНИЕ','Отправить сообщение на короткий номер')
+							+e.foot
+								img.res-i(src="img/@2x/phone_icons.png", alt="")
+						+slide('','с QIWI кошелька','Пожертвование с помощью банковской карты или QIWI-кошелька','qiwi_sign_rgb.png')
+						+slide('','Со счёта Paypal','Перевод со счёта Paypal','paypal.png','paypal.png')
+						+slide('3','НАЛИЧНЫМИ','Внести пожертвование на стойке фонда  в одном из ТЦ Москвы')
+						+slide('4','ЮРИДИЧЕСКИМ ЛИЦАМ','Заполнить форму основания платежа')
+				.d-none.d-xl-block
+					+arrow()
+	// end s-why

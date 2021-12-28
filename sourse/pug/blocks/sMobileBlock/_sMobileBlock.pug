@@ -1,0 +1,22 @@
+mixin sMobileBlock()
+	// start sMobileBlock
+	+b.sMobileBlock.section.d-sm-none&attributes(attributes)
+		.container
+			mixin item(i,t,l,i2, p)
+				+e.A.item.bg-wrap(href="#")
+					img.object-fit-js.picture-bg(src=`img/@2x/mobblock-${i}.jpg`, alt="")
+					+e.label
+						if i2
+							img(src=`img/${i2}`, alt="")
+						= l
+					div.w-100
+						+e.title= t 
+							| 
+							block
+						if p
+							p= p
+			+item("1",'Храм в честь свт. Тихона Патриарха Всероссийского','Новый проект','')
+				em в Клину
+			+item("2",'Срочный ремонт крыши','СРОЧНЫЙ сбор','svg/interface.svg','Нужно всего 30 000 Р. Поднажмём!')
+			+item("3",'Подарочный сертификат благотворителя','Новый сертификат','')
+	// end sMobileBlock

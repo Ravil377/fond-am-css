@@ -1,0 +1,39 @@
+mixin s-news()
+	// start s-news
+	+b.SECTION.s-news.section#s-news&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Новости 
+			.row
+				.col
+					mixin item()
+						+b.news-item
+							.row
+								.col-auto
+									+e.img-wrap--lg(href="#")
+										img.res-i(src="img/@2x/projec-2.jpg", alt="")
+								.col
+									+e.small  НОВОСТИ ФОНДА
+									+e.title
+										a(href="#") Происхождение (изнесение) честных древ животворящего Креста Господня
+									+e.small-gal
+										- for (var x = 0; x < 4; x++)
+											+e.img-link(href="img/@2x/project-main-1.jpg" data-fancybox="news-gal")
+												img.res-i(src="img/@2x/project-main-1.jpg", alt="")
+									+e.foot
+										+e.date  13.08.19
+										+e.foot-item
+											+icon("eye")
+											| 45
+	
+										+e.foot-item
+											+icon("share")
+											| 18
+						// /+b.news-item
+					+item()
+					.d-lg-none
+					+item()
+					+item()
+				.col-auto
+					+b.video
+	// end s-news

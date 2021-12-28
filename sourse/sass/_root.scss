@@ -1,0 +1,10 @@
+:root{
+		@include media-breakpoint-up(xl) {
+
+			--about-W: #{rem(750)}
+		}
+			@include media-breakpoint-up(lg) {
+
+				--about-W: #{rem(600)}
+			}
+}

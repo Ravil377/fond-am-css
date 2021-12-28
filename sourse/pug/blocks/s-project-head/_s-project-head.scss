@@ -1,0 +1,167 @@
+
+	// start .s-project-head
+	.s-project-head {
+		&__text{
+			text-align: center;
+			margin-top: rem(15);
+			&::before{
+				content: url(../img/svg/mark.svg);
+				margin-right: rem(5);
+				position: relative;
+				top: rem(5);
+				// display: block;
+				// text-align: center;
+			}
+		}
+		&__input-wrap{
+				@include media-breakpoint-up(lg) {
+
+					flex: 0 0 50%;
+				}
+				flex: 0 0 100%;
+					margin-bottom: 0;
+		}
+				&__input-wrap:nth-child(1) &__input{
+					background-image: url(../img/svg/hrum.svg);
+						@include media-breakpoint-up(lg){
+
+							border-radius: 200px 0 0 200px;
+						}
+						border-radius: 200px ;
+					margin-right: -1px;
+
+				}
+				@include media-breakpoint-down(md) {
+
+					&__input-wrap:nth-child(2) {
+						display: none;
+					}
+				}
+				&__input-wrap:nth-child(2) &__input{
+					background-image: url(../img/svg/mark.svg);
+					border-radius:0 200px 200px 0;
+					
+				}
+				
+				&__input{
+					background-position: rem(28) center;
+					background-repeat: no-repeat;
+					padding-left: rem(60);
+					
+					border: 1px solid #EEEEEE;
+				}
+				&__input-group{
+					display: flex;
+					box-shadow: 0px 8px 16px rgba(80, 87, 105, 0.15);
+					border-radius: 200px;
+				}
+
+		&__btn{
+			margin-left: auto;
+			margin-right: auto;
+			@extend .btn;
+			@extend .btn-dark2;
+			@extend .btn-block;
+			box-shadow: 0px 8px 16px rgba(80, 87, 105, 0.25);
+			width: rem(200);
+				@include media-breakpoint-up(lg){
+
+					margin-top: rem(40);
+				}
+				margin-top: rem(20);
+		}
+		&__variant {
+			display: flex;
+			align-items: center;
+			padding-top: rem(60);
+			margin-left: rem(-15px);
+			margin-right: rem(-15px);
+			@include media-breakpoint-down(xs) {
+				margin-left: rem(-5);
+				margin-right: rem(-5);
+				justify-content: space-between;
+
+				}
+		}
+		&__variant-item{
+			// margin-right: rem(30);
+				@include media-breakpoint-down(xs) {
+						margin-left: rem(5);
+						margin-right: rem(5);
+						font-size: 11px;
+				}
+				margin-left: rem(15px);
+				margin-right: rem(15px);
+			display: flex;
+			align-items: center;
+				@include media-breakpoint-up(sm) {}
+			font-size: rem(13);
+			font-weight: bold;
+			letter-spacing: 0.15em;
+			@include mt;
+			cursor: pointer;
+			.icon-var{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				
+				width: rem(24);
+				margin-right: rem(7);
+				span{
+					margin-bottom: rem(3);
+					margin-right: rem(3);
+					width: rem(5);
+					height: rem(5);
+					display: block;
+					background-color: currentColor;
+				}
+			}
+			.icon{
+				@include media-breakpoint-up(sm){
+
+					font-size: rem(20);
+					margin-right: rem(10);
+				}
+				font-size: 15px;
+				margin-right: rem(5);
+				flex:  0 0 auto;
+				position: relative;
+				top: rem(-2);
+				&-1{
+
+					stroke-width: 1px;
+					fill: transparent;
+				}
+			
+			}
+			&.active,
+			&:hover{
+				color: $primary;
+			}
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.s-project-head

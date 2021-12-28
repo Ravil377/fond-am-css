@@ -1,0 +1,73 @@
+mixin sNewsPage()
+	// start sNewsPage
+	+b.SECTION.sNewsPage#sNewsPage&attributes(attributes)
+		.container
+			block
+		.container
+			+e.news-content
+				+e.A.last-link(href='#')
+					span ПОСЛЕДНИЕ
+					+icon('chevron-down')
+				+e.news-items-box
+					+e.news-item
+						+e.A.item-img-cont(href='#')
+							img(src="img/@2x/news-item-img-1.jpg" alt="")
+						+e.item-content
+							+e.A.title(href="#") НОВОСТИ ФОНДА
+							+e.A.headline(href="#")  Происхождение (изнесение) честных древ животворящего Креста Господня
+							+imgStrip()
+							+dateViewShare()
+					+e.news-video-cont
+						+e.accept-ratio-box
+							+e.news-video-img-cont
+								img(src="img/@2x/news-video.jpg" alt="")
+							+e.videon-nav
+								+e.A.play-btn(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+								+e.lower-items.d-none.d-sm-block
+									+e.video-descr Экскурсия по храму Покрова Пресвятой Богородицы в Ясеневе
+									+dateViewShare()
+					+e.news-item
+						+e.A.item-img-cont(href='#')
+							img(src="img/@2x/news-item-img-2.jpg" alt="")
+						+e.item-content
+							+e.A.title(href="#") Новоспасский монастырь
+							+e.A.headline(href="#")  Происхождение (изнесение) честных древ животворящего Креста Господня
+							+e.P.description-par.d-none.d-md-block Этап по&nbsp;укладке полов в&nbsp;Знаменском храме Новоспасского монастыря завершен. Благодаря отделке из&nbsp;иерусалимского камня, храм приобрел светлый и&nbsp;торжественный вид. В&nbsp;этом смогли убедиться гости сегодняшней экскурсии, которую уже не&nbsp;в&nbsp;первый раз проводит в&nbsp;Новоспасском монастыре наш Фонд.
+							+dateViewShare('d-none d-sm-flex')
+							+e.P.description-par.d-md-none Этап по&nbsp;укладке полов в&nbsp;Знаменском храме Новоспасского монастыря завершен. Благодаря отделке из&nbsp;иерусалимского камня, храм приобрел светлый и&nbsp;торжественный вид. В&nbsp;этом смогли убедиться гости сегодняшней экскурсии, которую уже не&nbsp;в&nbsp;первый раз проводит в&nbsp;Новоспасском монастыре наш Фонд.
+							+dateViewShare('d-sm-none tear-itself-sm')
+					+e.news-item
+						+e.A.item-img-cont(href='#')
+							img(src="img/@2x/news-item-img-3.jpg" alt="")
+						+e.item-content
+							+e.A.title(href="#") Новоспасский монастырь
+							+e.A.headline(href="#")  Происхождение (изнесение) честных древ животворящего Креста Господня
+							+dateViewShare()
+			.d-sm-none.text-center
+				+e.A.show-more-btn(href="#") ПОКАЗАТЬ ЕЩЁ
+			.d-none.d-sm-block
+				+pugin()
+			+s-form022()
+	// end sNewsPage
+
+mixin dateViewShare(parentClasses)
+	+e.date-view-share-cont(class=parentClasses)
+		+e.date-txt 13.08.20
+		+e.view-txt.view-shar-frame
+			+icon('eye')
+			span 45
+		+e.share-txt.view-shar-frame
+			+icon('share')
+			span 45
+
+mixin imgStrip()
+	+e.small-img-links-cont.d-none.d-sm-flex
+		+e.A.small-img-link(href='#')
+			img(src="img/@2x/news-img-strip-1.jpg")
+		+e.A.small-img-link(href='#')
+			img(src="img/@2x/news-img-strip-2.jpg")
+		+e.A.small-img-link(href='#')
+			img(src="img/@2x/news-img-strip-3.jpg")
+		+e.A.small-img-link(href='#')
+			img(src="img/@2x/news-img-strip-4.jpg")
+			//-

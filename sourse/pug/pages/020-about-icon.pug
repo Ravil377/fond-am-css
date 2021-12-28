@@ -1,0 +1,77 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-cards/_s-cards.pug
+include ../blocks/s-project/_s-project.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/sMobileBlock/_sMobileBlock.pug
+include ../blocks/s-about/_s-about.pug
+
+
+	//020
+include ../blocks/sAboutIcon/_sAboutIcon.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Об иконе'
+	title= title
+block pagecontent 
+
+	+mob-mnu()
+	header.header
+		+top-line()
+	+b.about-icon-preheader
+		.container.text-center
+			+e.main-found-btn Основной проект фонда
+			+e.H2.main-headline Новоспасский монастырь
+			+e.A.location-link(href="#")
+				+icon('mark')
+				span Москва, Крестьянская площадь, 10
+	+b.top-line-sub-inner
+		+b.top-line-sub.d-none.d-sm-block
+			.container
+				ul
+					li.menu-item-has-children
+						a(href="#") ЦЕЛЬ СБОРА
+						ul.sub-menu
+							li: a(href="#") цель збора 1
+							li: a(href="#") цель збора 2
+							li: a(href="#") цель збора 3
+					li.menu-item-has-children
+						a(href="#") Всецарица
+						ul.sub-menu
+							li: a(href="#") Всецарица 1
+							li: a(href="#") Всецарица 2
+							li: a(href="#") Всецарица 3
+					li.current-menu-item
+						a(href="#") о храме
+					li.menu-item-has-children
+						a(href="#") Новости
+						ul.sub-menu
+							li: a(href="#") Новости 1
+							li: a(href="#") Новости 2
+							li: a(href="#") Новости 3
+	//- +header()
+	//- 	//- +top-nav()
+	//- 	+header-block()
+	+sAboutIcon()
+		+page-head('Всецарица')(class="ttu page-head--with-video")
+	//+s-about
+		+page-head('О фонде')(class="ttu page-head--with-video")
+		//- +sMobileBlock
+	//- .d-flex.flex-column.z-6
+	//- 	+s-project
+	//- 	+s-cards()(class='order-sm-first')
+	//- +s-project2
+	//- +s-form()
+	//- +s-rews
+	//- +s-news
+	//- +s-why
+	//- +s-logo
+	+footer()

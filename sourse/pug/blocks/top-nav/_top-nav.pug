@@ -1,0 +1,131 @@
+
+mixin mob-mnu()
+
+	mixin inner(first)
+		+b.menu-mobile&attributes(attributes)
+			+e.inner
+				+e.head.row.align-items-center
+					.col
+						if !first
+							+b.toggle-menu-mobile--inner-js
+								//- img.res-i(src="img/svg/arrow-long-left.svg", alt="")
+								+icon("arrow-long-left")
+						else
+							+b.toggle-menu-mobile--js
+								//- img.res-i(src="img/svg/arrow-long-left.svg", alt="")
+								+icon("arrow-long-left") 
+					.col-auto
+						+b.toggle-menu-mobile--js
+							+icon("close")
+				block
+		//  мобильное меню
+	+inner('first')(class="menu-mobile--js  ")
+		+b.UL.nav--lg(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			mixin li(a)
+				+e.LI.item( itemprop="item" )&attributes(attributes)
+					+e.A.link(href="#"  itemprop="url")= a 
+					block
+			+li("Главная")
+			+li("О фонде")(class="nav__item--has-children nav__item--has-children-js")
+				+inner()(class="menu-mobile-sub--js")
+					+b.UL.nav.ttu.font-default(itemscope itemtype="http://schema.org/SiteNavigationElement") 
+						+li("О фонде")
+						+li("Команда ")
+						+li(" Наши награды")
+						+li(" документы")
+						+li(" ОТЧЁТЫ")
+						 
+
+			+li("Текущие проекты")(class="nav__item--has-children nav__item--has-children-js")
+				+inner()(class="menu-mobile-sub--js")
+					+e.title.h3.text-primary
+						a.link-white.tdn(href="#") Текущие проекты
+					+b.projects-nav
+						mixin item(t)
+							li
+								a(href="#")
+									+e.img-wrap
+										img(src='img/@1x/video.jpg', alt="")
+									span= t
+										block
+						ul
+							+item('Новоспасский монастырь')
+							+item('Храма свт. Николая Чудотворца ')
+								em в селе Мужиново, Брянская обл.
+							+item('Храм равноапостольного князя Владимира, ')
+								em п. Станционный-Полевской, Свердловская обл.
+							+item('Молитвенный дом Архангела Михаила, ')
+								em с. Каменный Брод, Пензенская обл.
+							+item('Храма свт. Николая Чудотворца ')
+								em в селе Мужиново, Брянская обл.
+							+item('Новоспасский монастырь')
+							+item('Храм равноапостольного князя Владимира,')
+								em  п. Станционный-Полевской, Свердловская обл.
+							+item('Молитвенный дом Архангела Михаила, ')
+								em с. Каменный Брод, Пензенская обл.
+
+			+li("Реализованные проекты")(class="nav__item--has-children nav__item--has-children-js")
+				+inner()(class="menu-mobile-sub--js active menu-mobile-sub--project  " )
+					img(src="img/@2x/project-main-1.jpg", alt="").img-bg
+					+e.body
+						+e.label  Основной проект фонда
+						+e.title.h3.text-white.ttu Новоспасский монастырь
+						+b.UL.nav.ttu.font-default(itemscope itemtype="http://schema.org/SiteNavigationElement") 
+							+li('ЦЕЛЬ СБОРА') 
+							+li('Смета') 
+							+li('ВИДЕО') 
+							+li('Всецарица') 
+							+li('о храме') 
+							+li('Новости') 
+					+e.foot
+						ul
+							li
+								a(href="#")
+									+icon('fast')
+									| Быстрое пожертвование
+							li
+								a(href="#")
+									+icon('user-circle')
+									| Именное пожертвование
+							
+							li
+								a(href="#")
+									+icon('users')
+									| Семейное пожертвование
+						
+							 
+					+e.link-share(href="#")
+						+icon('share')
+						| Рассказать о проекте друзьям
+						
+			+li("Новости")
+			+li("Контакты" )
+		+mnu2()
+		+e.text
+			a(href="tel:+7(495)422-25-88") +7 (495) 422-25-88
+			br
+			a(href="mailto:info@fond-am.ru") info@fond-am.ru
+			br
+			| Москва, Новоясеневский пр-т, 42
+		+soc
+		//- +e.btn(href="#") ПОЖЕРТВОВАТЬ
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container-fluid
+			.row
+				+e.col.col-auto
+					+b.toggle-menu-mobile--js.d-xl-none
+						span
+				.col
+					.d-none.d-xl-block
+						+mnu2()
+						+mnu0()
+				.col-auto.d-none.d-sm-block
+					+soc
+				.col-auto
+					+b.link-donate(href="#")
+						+e.icon-wrap.d-xxxl-none
+							+icon('donate')
+						.d-none.d-xxxl-block ПОЖЕРТВОВАТЬ
+	// end top-nav

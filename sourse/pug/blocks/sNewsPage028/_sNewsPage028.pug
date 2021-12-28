@@ -1,0 +1,56 @@
+mixin sNewsPage028()
+	// start sNewsPage028
+	+b.SECTION.sNewsPage028#sNewsPage028&attributes(attributes)
+		.container
+			block
+		.container
+			+b.search-strip-025
+				+form-wrap()
+					+input('Например: Новоспаский монастырь', 'text', undefined, 'search-page025')
+					.text-center
+						+e.BUTTON.search-btn(type="submit") ИСКАТЬ
+			+b.news-filter-box
+				+e.date-filter-select-cont
+					+DatefilterSelect('floorSel', ['СТАРЫЕ', '2020', '2019'])
+				+e.date-filter-select-cont.right-select.d-xl-none
+					+ThemefilterSelect('floorSel', ['СТАРЫЕ', '2020', '2019'])
+		.container(data-sticky-container)
+			+b.sidebar.blured-background.d-none.d-xl-block
+				+e.UL.nav.sticky-js(data-margin-top="140")
+					li: a(href="#video") Видео презентация
+					li: a(href="#about-icon") Наша миссия
+					li: a(href="#wonder-cases") Наши задачи
+					li: a(href="#wonder-cases") Наши ценности
+					li: a(href="#wonder-cases") Ключевые  достижения
+			+e.content
+				+e.video-items-row.row
+					+VideoBrickItem('video')
+					+VideoBrickItem('028-news-video-2')
+					+VideoBrickItem('028-news-video-3')
+					+VideoBrickItem('028-news-video-3')
+				.d-none.d-sm-block
+					+pugin()
+				.d-sm-none.text-center
+					+e.A.show-more-btn(href="#") ПОКАЗАТЬ ЕЩЁ
+	// end sNewsPage028
+
+mixin VideoBrickItem(imgName)
+	.col-12.col-md-6
+		+e.video-brick-item
+			+e.A.video-link(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+				+e.video-img
+					img(src=`img/@2x/${imgName}.jpg` alt='')
+				+e.play-btn-cont
+					+e.play-btn
+			+e.video-desr-box
+				+e.video-title Новоспасский монастырь
+				+e.A.video-headline(href="#") Благоукрашение Знамеского храма Новоспасского монатсыря
+				+e.date-view-share-cont
+					+e.date-txt 13.08.20
+					+e.view-txt.view-shar-frame
+						+icon('eye')
+						span 45
+					+e.share-txt.view-shar-frame
+						+icon('share')
+						span 45
+

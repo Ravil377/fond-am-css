@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-cards/_s-cards.pug
+include ../blocks/s-project/_s-project.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-continue/_s-continue.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '06'
+	title= title
+block pagecontent 
+
+	+mob-mnu()
+	div.dark-bg.text-white.bgs(style="background-image: url(img/@2x/project-main-1.jpg);")
+		header.header
+			+top-line()
+		
+		+page-head()
+			+e.label Основной проект фонда
+			+e.H1.title-lg Новоспасский монастырь
+			+e.mark 
+				+icon("mark")
+				| Москва, Крестьянская площадь, 10
+		+s-continue
+			.s-continue-wrapper.s-continue-wrapper--lg
+				+e.group
+					+e.group-title--lg.text-success
+						img(src="img/svg/success.svg", alt="").mr-2
+						br.d-sm-none
+						| Пожертвование успешно&nbsp;совершено!
+					+e.p-text Сердечно благодарим Вас за&nbsp;совершенное пожертвование на&nbsp;восстановление интерьеров Знаменского храма Новоспасского монастыря&nbsp;&mdash; самой древней обители города Москвы.
+
+
+					+e.p-text О&nbsp;вашем здравии в&nbsp;Новоспасском монастыре будет совершен молебен &laquo;&mdash;&raquo; ------- 2018&nbsp;года. В&nbsp;последующее время за&nbsp;каждой литургией, совершаемой в&nbsp;Знаменском храме братия монастыря будет молиться о&nbsp;вас, как &laquo;о&nbsp;строителях и&nbsp;благоукрасителях храма сего&raquo;, и&nbsp;эта молитва будет возноситься столько времени, сколько будет стоять храм.
+					p.pb-5 С пожеланиями помощи Божией во всех ваших <br> делах и начинаниях, Фонд Архангела Михаила
+					a(href="#" class="s-news__btn btn-more ttu") на главную
+	+footer()
