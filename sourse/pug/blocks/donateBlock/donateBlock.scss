@@ -196,7 +196,7 @@
 			right: 0;
 			@include media-breakpoint-up(md){
 				width: 83px;
-				left: 100%;
+				left: 88% !important;
 				right: unset;
 			}
 			height: 100%;
@@ -247,18 +247,19 @@
 		}
 	}
 	.add-btn-txt{
+		display: block !important;
+		margin: 0 auto !important;
+		width: fit-content;
 		line-height: 130%;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		color: $dark2;
-
-		font-size: rem(16px);
-		margin-left: rem(14px);
+		color: #FFFFFF !important;
+		font-size: rem(13px);
+		
 	}
 	//
 
 }
-
 
 .sertBlock {
 	margin-top: rem(120px);
@@ -407,4 +408,71 @@
 		line-height: 130%;
 		color: #C5AA79;
 	}
+}
+
+
+.sertBlock1 {
+	display: flex;
+	&__button-container {
+		padding: 0 15px;
+	}
+
+	&__content {
+		max-width: var(--about-W);
+		margin-left: auto;
+		margin-right: auto;
+		p {
+			font-family: GaramondPremrPro;
+			font-style: normal;
+			font-weight: normal;
+			font-size: rem(24px);
+			line-height: 135%;
+			color: #FFFFFF;
+		}
+	}
+	&__price {
+		margin-top: rem(60px);
+		text-align: center;
+		font-family: GaramondPremrPro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: rem(72px);
+		line-height: 100%;
+		color: #505769;
+	}
+	&__price-desc {
+		text-align: center;
+		font-family: Circe;
+		font-style: normal;
+		font-weight: bold;
+		font-size: rem(21px);
+		line-height: 120%;
+		color: #505769;
+		margin-bottom: rem(60px);
+	}
+	&__desc {
+		font-family: GaramondPremrPro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: rem(24px);
+		line-height: 135%;
+		color: #505769;
+	}
+}
+
+.donate-form-local023__title_gold {
+	font-family: GaramondPremrPro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: rem(24px);
+	line-height: 130%;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #C5AA79;
+	margin-bottom: 20px;
+}
+
+.title.donate-form-local023__title_nomb {
+	margin-bottom: 0;
 }

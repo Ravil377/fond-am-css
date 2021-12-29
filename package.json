@@ -4,7 +4,8 @@
   "description": "Gulp Bootstrap scss Pug",
   "main": "block.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d build"
   },
   "author": "Khalunin Pavel",
   "license": "ISC",
@@ -42,7 +43,6 @@
     "gulp-tabify": "0.0.2",
     "gulp-uglify": "^3.0.2"
   },
-  "optionalDependencies": {},
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "@ttskch/select2-bootstrap4-theme": "^1.4.0",
@@ -50,6 +50,7 @@
     "bootstrap": "^4.5.0",
     "chosen-js": "^1.8.7",
     "ddslick": "^1.0.3",
+    "gh-pages": "^3.2.3",
     "gijgo": "^1.9.13",
     "gulp-group-css-media-queries": "^1.2.2",
     "inputmask": "^5.0.3",

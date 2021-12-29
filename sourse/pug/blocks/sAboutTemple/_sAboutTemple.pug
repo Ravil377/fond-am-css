@@ -1,16 +1,11 @@
+include ../donateBlock/donateBlock.pug
+
 mixin sAboutTemple()
 	// start sAboutTemple
 	+b.SECTION.sAboutTemple#sAboutTemple&attributes(attributes)
 			.container
 				block
-			.container(data-sticky-container)
-				+b.sidebar.blured-background
-					+e.UL.nav.sticky-js(data-margin-top="140")
-						li: a(href="#video") Видео презентация
-						li: a(href="#about-icon") Наша миссия
-						li: a(href="#wonder-cases") Наши задачи
-						li: a(href="#wonder-cases") Наши ценности
-						li: a(href="#wonder-cases") Ключевые  достижения
+			.container
 				+e.content
 					#temple-descr
 						+e.group
@@ -45,9 +40,15 @@ mixin sAboutTemple()
 										+oldTempleSilde(3, 3)
 										+oldTempleSilde(3, 4)
 									p В&nbsp;настоящее время ведется его реставрация и&nbsp;благоукрашение. Роль, которая отведена этой небольшой церкви в&nbsp;наши дни, поистине знаковая. Скоро сюда будет перенесен чудотворный образ Пресвятой Богородицы &laquo;Всецарица&raquo;, к&nbsp;которому стекается множество страждущих от&nbsp;раковых заболеваний&nbsp;&mdash; &laquo;чумы&raquo; современности. Верим и&nbsp;надеемся, что место, освященное памятью страдальцев нескольких эпох, станет местом милости Божией...
-									+e.lower-primay-txt.text-center
-										p Чудотворная икона &laquo;Всецарица&raquo; будет торжественно перенесена в&nbsp;отреставрированную Знаменскую церковь 31&nbsp;августа 2020&nbsp;года.
-										+e.A.donate-btn(href="#") ПОЖЕРТВОВАТЬ
+									+e.content.sMainPage__about-icon__desc
+										p После завершения работ по благоукрашению Знаменского храма, <span>имена всех благотворителей</span>, всех тех, кто помог возродить этот храм, будут вписаны на <span>вечное поминовение</span> в Новоспасском монастыре. Молитва будет возноситься монахами монастыря перед образом Пречистой Божией Матери "Всецарица" столько времени, сколько будет стоять этот прекрасный храм.
+										//- a(href="#").about-icon__button Подробнее об иконе
+									+e.img-cont-altar
+										img.lazy(src="#" data-src="img/@2x/altar.png" alt="" class="img-cont__about")
+									//- +e.lower-primay-txt.text-center
+									//- 	p Чудотворная икона &laquo;Всецарица&raquo; будет торжественно перенесена в&nbsp;отреставрированную Знаменскую церковь 31&nbsp;августа 2020&nbsp;года.
+									//- 	+e.A.donate-btn(href="#") ПОЖЕРТВОВАТЬ
+					+donateBlock('Впишите своё имя в историю Новоспасского монастыря')
 
 	// end sAboutTemple
 
