@@ -1092,3 +1092,10 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+var btnsRemoveOpacity = document.querySelectorAll('.subheadline_on-js');
+btnsRemoveOpacity.forEach(function (btn) {
+	btn.addEventListener('click', function () {
+		document.querySelector('[data-id="' + btn.dataset.btnid + '"]').classList.remove('subheadline_opacity');
+	});
+});
