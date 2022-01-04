@@ -50,22 +50,22 @@
 					</div>
 				</div>
 				<div class="container" data-sticky-container="data-sticky-container">
-					<section class="sertBlock1" id="sertBlock1">
+					<section class="sertBlock sertBlock1" id="sertBlock1">
 						<div class="container">
-							<div class="sertBlock1__content">
+							<div class="sertBlock__content">
 								<div class="row no-gutters sertBlock__m-15">
-									<div class="sertBlock1__card col-sm-6">
+									<div class="sertBlock__card col-sm-6">
 										<div class="img-block"><img src="img/@2x/single-sert.jpg" alt=""/></div>
 									</div>
-									<div class="sertBlock1__card col-sm-6">
-										<div class="img-block"><img src="img/@2x/family-sert-back.jpg" alt=""/></div>
+									<div class="sertBlock__card col-sm-6">
+										<div class="img-block"><img src="img/@2x/family-sert-red.jpg" alt=""/></div>
 									</div>
 								</div>
-								<div class="sertBlock1__price">300 ₽
+								<div class="sertBlock__price">300 <span>₽</span>
 								</div>
-								<div class="sertBlock1__price-desc">Одно имя. Количество имён не ограничено.
+								<div class="sertBlock__price-desc">Одно имя. Количество имён не ограничено.
 								</div>
-								<div class="sertBlock1__desc">После завершения работ по благоукрашению Знаменского храма, имена всех благотворителей, всех тех, кто помог возродить этот храм, будут вписаны на вечное поминовение в Новоспасском монастыре. Молитва будет возноситься монахами монастыря перед образом Пречистой Божией Матери "Всецарица" столько времени, сколько будет стоять этот прекрасный храм.
+								<div class="sertBlock__desc">После завершения работ по благоукрашению Знаменского храма, имена всех благотворителей, всех тех, кто помог возродить этот храм, будут вписаны на вечное поминовение в Новоспасском монастыре. Молитва будет возноситься монахами монастыря перед образом Пречистой Божией Матери "Всецарица" столько времени, сколько будет стоять этот прекрасный храм.
 								</div>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 								<div class="donate-form-local023__title">Впишите своё имя в историю Новоспасского монастыря
 								</div>
 								<div class="donate-form-local023">
-									<div class="donate-form-local023__inputs-names-bl inputs-parent-js">
+									<div class="donate-form-local023__inputs-names-bl about-health-js">
 										<div class="donate-form-local023__title_gold">О здравии
 										</div>
 										<div class="form-wrap">
@@ -93,7 +93,7 @@
 												<div class="donates-inputs-box-js">
 													<div class="donate-input-name-box">
 														<!--dont change the name it generates by js-->
-														<input type="text" name="donate-inp-name-1" value="Николай" placeholder="Введите Им'я"/>
+														<input class="donate-input-js" type="text" name="donate-inp-name-1" data-price="300" data-count="1" placeholder="Введите имя"/>
 														<div class="cross-btn"></div>
 													</div>
 												</div>
@@ -104,7 +104,7 @@
 									</div>
 								</div>
 								<div class="donate-form-local023">
-									<div class="donate-form-local023__inputs-names-bl inputs-parent-js">
+									<div class="donate-form-local023__inputs-names-bl about-piece-js">
 										<div class="donate-form-local023__title_gold">О упокоении
 										</div>
 										<div class="form-wrap">
@@ -118,7 +118,7 @@
 												<div class="donates-inputs-box-js">
 													<div class="donate-input-name-box">
 														<!--dont change the name it generates by js-->
-														<input type="text" name="donate-inp-name-1" value="Николай" placeholder="Введите Им'я"/>
+														<input class="donate-input-js" type="text" name="donate-inp-name-1" data-price="300" data-count="1" placeholder="Введите имя"/>
 														<div class="cross-btn"></div>
 													</div>
 												</div>
@@ -144,7 +144,7 @@
 									</div><br><br>
 									<div class="row no-gutters">
 										<label class="input-btn col-sm-3">
-											<input type="radio" name="payment"/><span class="input-btn__title"><img class="logo-text res-i" src="img/svg/card.svg" alt=""/></span>
+											<input type="radio" name="payment" checked="checked"/><span class="input-btn__title"><img class="logo-text res-i" src="img/svg/card.svg" alt=""/></span>
 										</label>
 										<label class="input-btn col-sm-3">
 											<input type="radio" name="payment"/><span class="input-btn__title"><img class="logo-text res-i" src="img/svg/pay.svg" alt=""/></span>
@@ -169,24 +169,6 @@
 										<label class="input-btn col-sm-3">
 											<input type="radio" name="payment"/><span class="input-btn__title"><img class="logo-text res-i" src="img/svg/sbp.svg" alt=""/></span>
 										</label>
-									</div>
-								</div>
-								<div class="donate-form-local023__group donate-form-local023__group--other-border">
-									<div class="donate-form-local023__group-title">Сумма пожертвования
-									</div>
-									<div class="row no-gutters">
-										<label class="input-btn col-sm-4">
-											<input type="radio" name="rub"/><span class="input-btn__title">300 ₽</span>
-										</label>
-										<label class="input-btn col-sm-4">
-											<input type="radio" name="rub" checked="checked"/><span class="input-btn__title">500 ₽</span>
-										</label>
-										<label class="input-btn col-sm-4">
-											<input type="radio" name="rub"/><span class="input-btn__title">1 000 ₽</span>
-										</label>
-										<div class="donate-form-local023__input-wrap form-group"><input class="donate-form-local023__input form-control" type="text" placeholder="Другая сумма" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
 									</div>
 								</div>
 								<div class="donate-form-local023__group donate-form-local023__group--other-border">
@@ -218,8 +200,10 @@
 										</label>
 										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Осуществляя пожертвование я принимаю условия <a href="#">договора-оферты</a></small>
 										</label>
-										<div class="text-center pt-2">
-											<button class="form-wrap__btn btn-success" type="submit">ПОЖЕРТВОВАТЬ
+										<div class="text-center pt-2 flex-block">
+											<div class="form-wrap__group-title-sum">ИТОГО: <span class="sum-count-js">0</span>₽
+											</div>
+											<button class="form-wrap__btn btn-success btn-right" type="submit">ПОЖЕРТВОВАТЬ
 											</button>
 										</div>
 									</div>

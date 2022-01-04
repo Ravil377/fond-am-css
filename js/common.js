@@ -790,12 +790,45 @@ function eventHandler() {
 		$('.center-neighbor').removeClass('center-neighbor');
 		$(rightSibling).addClass('center-neighbor');
 		$(leftSibling).addClass('center-neighbor');
-	} //name inputs js 023
+	}
+
+	var totalCount = document.querySelector('.sum-count-js');
+
+	var totalCounter = function totalCounter() {
+		var total = 0;
+		var inputs = document.querySelectorAll('.donate-input-js');
+		inputs.forEach(function (input) {
+			return emptyInput(input) && (total = total + +input.dataset.price);
+		});
+		totalCount.textContent = total;
+	};
+
+	var emptyInput = function emptyInput(input) {
+		return input.value.length >= 1;
+	};
+
+	var listenerOnInput = function listenerOnInput(e) {
+		if (e.target.value.length >= 2) {
+			totalCounter();
+		}
+	}; //name inputs js 023
 
 
 	function setAddRemoveInpsWork(parentContSelector) {
 		var parent = document.querySelector(parentContSelector);
 		if (!parent) return;
+		var sum = document.querySelector('.sum-count-js');
+		if (!sum) return;
+		var input = parent.querySelector('.donate-input-js');
+		if (!input) return;
+		input.addEventListener('input', function (e) {
+			return listenerOnInput(e);
+		}); // 	if(e.target.value.length == 1 && e.data != null) {
+		// 		input.value = `${e.target.dataset.count}. ${e.data}`
+		// 	}
+		// 	listenerOnInput();
+		// })
+
 		var addBtn = parent.querySelector('.add-name-btn-js');
 		if (!addBtn) return;
 		addBtn.addEventListener('click', appendNewInp.bind(undefined, parent)); //it happens only at once
@@ -817,9 +850,9 @@ function eventHandler() {
 		} finally {
 			_iterator3.f();
 		}
-	}
+	} // setAddRemoveInpsWork('.inputs-parent-js');
 
-	setAddRemoveInpsWork('.inputs-parent-js');
+
 	setAddRemoveInpsWork('.about-health-js');
 	setAddRemoveInpsWork('.about-piece-js'); //remove Btn Js
 
@@ -837,6 +870,7 @@ function eventHandler() {
 		}
 
 		setSeqNumsForAllInps(parent);
+		totalCounter();
 	} //create New inp funcs
 
 
@@ -858,9 +892,13 @@ function eventHandler() {
 		var newBox = document.createElement('div');
 		newBox.classList.add('donate-input-name-box');
 		var innerInp = document.createElement('input');
-		innerInp.setAttribute('placeHolder', "Введите Им'я");
+		innerInp.setAttribute('placeHolder', "Введите имя");
 		innerInp.setAttribute('type', 'text');
+		innerInp.setAttribute('data-count', seqNumber);
+		innerInp.setAttribute('data-price', '300');
 		innerInp.setAttribute('name', 'donate-inp-name-' + seqNumber);
+		innerInp.addEventListener('input', listenerOnInput);
+		innerInp.classList.add('donate-input-js');
 		var crossBtn = document.createElement('div');
 		crossBtn.classList.add('cross-btn');
 		var inpsBox = parent.querySelector('.donates-inputs-box-js');
@@ -1098,4 +1136,42 @@ btnsRemoveOpacity.forEach(function (btn) {
 	btn.addEventListener('click', function () {
 		document.querySelector('[data-id="' + btn.dataset.btnid + '"]').classList.remove('subheadline_opacity');
 	});
+});
+document.addEventListener("DOMContentLoaded", function () {
+	var step = 3; // Размер этих самых порций. Чтобы легко можно было поменять.
+
+	var prod = document.querySelector('.project-item__list');
+	var li = prod.querySelectorAll('.project-card-js');
+
+	for (var j = 0; j < step; j++) {
+		if (li[j]) {
+			li[j].classList.add('visi');
+		}
+	}
+
+	var moreBtn = document.querySelector('.project-btn-more-js');
+	moreBtn.addEventListener('click', function () {
+		var visi = prod.querySelectorAll('.visi');
+		var next = visi[visi.length - 1].nextElementSibling; // Достали следующий элемент ПОСЛЕДНЕГО элемента visi. 
+		//Предполагается, что никогда не будет добавлено полностью пустых ul.
+
+		var it = 0;
+
+		while (it < step) {
+			if (next) {
+				next.classList.add('visi');
+				next = next.nextElementSibling;
+				it++;
+			} else {
+				// moreBtn.remove();
+				break; // Если следующего элемента не оказалось - выключаем цикл.
+			}
+		}
+	});
+});
+var readMore = document.querySelector('.about-icon__button-js');
+readMore.addEventListener('click', function (e) {
+	e.preventDefault();
+	var over = document.querySelector('.sertBlock__desc-overflow');
+	over.classList.remove('sertBlock__desc-overflow');
 });
